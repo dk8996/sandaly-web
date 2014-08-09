@@ -18,7 +18,7 @@
 </head>
 
 <body>
-	<div id="wrapper">
+	<div id="wrapper" ng-controller="ShoeListCtrl">
 		<div class="promo-top">
 			<a class="promo" href="http://getsandal.com/offers/">
 				<div class="container">
@@ -105,7 +105,7 @@
 				</div>
 
 				<nav id="nav">
-					<ol class="nav-primary" ng-controller="FilterCtrl" >
+					<ol class="nav-primary" >
 						<li class="level0 nav-collection"><a class="level0"
 							href="http://getsandal.com/collection/" ng-mouseover="showCollection = true" ng-mouseleave="showCollection = false">Collection</a>
 
@@ -166,37 +166,37 @@
 
 							<div class="menu-wrapper menu" ng-show="showColor" ng-mouseover="showColor = true" ng-mouseleave="showColor = false">
 								<ul class="nav-color-list">
-									<li><a href="http://getsandal.com/color/blue/"><span
+									<li><a href="" ng-click="colorFilter = 'Blue'"><span
 											class="swatch blu"></span>Blue</a></li>
 
-									<li><a href="http://getsandal.com/color/green/"><span
+									<li><a href=""><span
 											class="swatch grn"></span>Green</a></li>
 
-									<li><a href="http://getsandal.com/color/yellow/"><span
+									<li><a href=""><span
 											class="swatch yel"></span>Yellow</a></li>
 
-									<li><a href="http://getsandal.com/color/orange/"><span
+									<li><a href=""><span
 											class="swatch ora"></span>Orange</a></li>
 
-									<li><a href="http://getsandal.com/color/red/"><span
+									<li><a href=""><span
 											class="swatch red"></span>Red</a></li>
 
-									<li><a href="http://getsandal.com/color/purple/"><span
+									<li><a href=""><span
 											class="swatch pur"></span>Purple</a></li>
 
-									<li><a href="http://getsandal.com/color/pink/"><span
+									<li><a href=""><span
 											class="swatch pin"></span>Pink</a></li>
 
-									<li><a href="http://getsandal.com/color/brown/"><span
+									<li><a href="" ng-click="colorFilter = 'Brown'"><span
 											class="swatch bro"></span>Brown</a></li>
 
-									<li><a href="http://getsandal.com/color/black/"><span
+									<li><a href="" ng-click="colorFilter = 'Black'"><span
 											class="swatch bla"></span>Black</a></li>
 
-									<li><a href="http://getsandal.com/color/white/"><span
+									<li><a href=""><span
 											class="swatch whi"></span>White</a></li>
 
-									<li><a href="http://getsandal.com/color/gray/"><span
+									<li><a href=""><span
 											class="swatch gry"></span>Gray</a></li>
 								</ul>
 								<a class="browse-all button button-medium"
@@ -208,11 +208,11 @@
 
 							<div class="menu-wrapper menu" ng-show="showPrice" ng-mouseover="showPrice = true" ng-mouseleave="showPrice = false">
 								<ul class="nav-group-list">
-									<li><a href="http://getsandal.com/width/extra-skinny/">
+									<li><a href="http://getsandal.com/price/">
 											<div class="wrapper" data-nav-img-alt="Low Priced Sandals"
-												data-nav-img-src="http://getsandal.com/skin/frontend/skinnyties/skinnyties/media/category/width/extra-skinny.jpg">
+												data-nav-img-src="http://getsandal.com/price.jpg">
 												<img alt="Low"
-													src="http://getsandal.com/skin/frontend/skinnyties/skinnyties/media/category/width/extra-skinny.jpg">
+													src="http://getsandal.com/price.jpg">
 
 												<div class="info">
 													<strong>Low</strong>
@@ -224,11 +224,11 @@
 											</div>
 									</a></li>
 
-									<li><a href="http://getsandal.com/width/skinny/">
+									<li><a href="http://getsandal.com/price">
 											<div class="wrapper" data-nav-img-alt="Mid Priced Sandals"
-												data-nav-img-src="http://getsandal.com/skin/frontend/skinnyties/skinnyties/media/category/width/skinny.jpg">
-												<img alt="Skinny Ties"
-													src="http://getsandal.com/skin/frontend/skinnyties/skinnyties/media/category/width/skinny.jpg">
+												data-nav-img-src="http://getsandal.com/pirce.jpg">
+												<img alt="Sandals"
+													src="http://getsandal.com/price.jpg">
 
 												<div class="info">
 													<strong>Mid</strong>
@@ -242,13 +242,13 @@
 									</a></li>
 
 									<li><a href="http://getsandal.com/width/narrow/">
-											<div class="wrapper" data-nav-img-alt="Narrow Ties"
-												data-nav-img-src="http://getsandal.com/skin/frontend/skinnyties/skinnyties/media/category/width/narrow.jpg">
-												<img alt="Narrow Ties"
-													src="http://getsandal.com/skin/frontend/skinnyties/skinnyties/media/category/width/narrow.jpg">
+											<div class="wrapper" data-nav-img-alt="High"
+												data-nav-img-src="http://getsandal.com/pirce.jpg">
+												<img alt="High"
+													src="http://getsandal.com/pirce.jpg">
 
 												<div class="info">
-													<strong>Narrow</strong>
+													<strong>High</strong>
 
 													<p>
 														Priced<br> <span>Over $50</span>
@@ -260,96 +260,26 @@
 								<a class="browse-all button button-medium"
 									href="http://getsandal.com/width/">Browse all widths</a>
 							</div></li>
+							<li class="level0 nav-width"><a class="level0"
+							href="" ng-click="colorFilter = ''" >Clear</a>
+							</li>
+							
 					</ol>
 				</nav>
 			</div>
 		</header>
 
 		<div class="matter" id="matter">
-			<div class="home-hero">
-				<div class="sidestep">
-					<div class="sidestep-wrapper" style="max-width: 945px;">
-						<ul class="sidestep-list" style="width: 945px; left: 0px;">
-							<li><a class="tie" href="http://getsandal.com/color/black/"><img
-									alt="Black Skinny Ties"
-									src="http://getsandal.com/skin/frontend/skinnyties/skinnyties/media/home/sidestep/black@1.5x.jpg">
 
-									<div class="label">Black</div></a></li>
-
-							<li><a class="tie" href="http://getsandal.com/color/blue/"><img
-									alt="Blue Skinny Ties"
-									src="http://getsandal.com/skin/frontend/skinnyties/skinnyties/media/home/sidestep/blue@1.5x.jpg">
-
-									<div class="label">Blue</div></a></li>
-
-							<li><a class="tie"
-								href="http://getsandal.com/collection/collegiate/"><img
-									alt="Collegiate Skinny Ties"
-									src="http://getsandal.com/skin/frontend/skinnyties/skinnyties/media/home/sidestep/collegiate@1.5x.jpg">
-
-									<div class="label">Collegiate</div></a></li>
-
-							<li><a class="tie"
-								href="http://getsandal.com/fabric/cotton/"><img
-									alt="Cotton Skinny Ties"
-									src="http://getsandal.com/skin/frontend/skinnyties/skinnyties/media/home/sidestep/cotton@1.5x.jpg">
-
-									<div class="label">Cotton</div></a></li>
-
-							<li><a class="tie"
-								href="http://getsandal.com/collection/favorites/"><img
-									alt="Favorite Skinny Ties"
-									src="http://getsandal.com/skin/frontend/skinnyties/skinnyties/media/home/sidestep/favorites@1.5x.jpg">
-
-									<div class="label">Favorites</div></a></li>
-
-							<li><a class="tie"
-								href="http://getsandal.com/pattern/graphic/"><img
-									alt="Graphic Skinny Ties"
-									src="http://getsandal.com/skin/frontend/skinnyties/skinnyties/media/home/sidestep/graphic@1.5x.jpg">
-
-									<div class="label">Graphic</div></a></li>
-
-							<li><a class="tie"
-								href="http://getsandal.com/pattern/plaid/"><img
-									alt="Plaid Skinny Ties"
-									src="http://getsandal.com/skin/frontend/skinnyties/skinnyties/media/home/sidestep/plaid@1.5x.jpg">
-
-									<div class="label">Plaid</div></a></li>
-
-							<li><a class="tie" href="http://getsandal.com/fabric/silk/"><img
-									alt="Silk Skinny Ties"
-									src="http://getsandal.com/skin/frontend/skinnyties/skinnyties/media/home/sidestep/silk@1.5x.jpg">
-
-									<div class="label">Silk</div></a></li>
-
-							<li><a class="tie"
-								href="http://getsandal.com/pattern/striped/"><img
-									alt="Striped Skinny Ties"
-									src="http://getsandal.com/skin/frontend/skinnyties/skinnyties/media/home/sidestep/striped@1.5x.jpg">
-
-									<div class="label">Striped</div></a></li>
-						</ul>
-					</div>
-
-					<ul class="sidestep-nav inactive">
-						<li><a class="prev disable" href="#">Previous</a></li>
-
-						<li><a class="next disable" href="#">Next</a></li>
-					</ul>
-				</div>
-
-				<div class="sidestep-headline">Start dressing better.</div>
-			</div>
 <div class="layer-fore">
 		        <div class="container">
 
 
 
-		<ol class="product-grid" ng-controller="ShoeListCtrl">
-							<li class="item" ng-repeat="shoe in shoes">
+		<ol class="product-grid">
+							<li class="item" ng-repeat="shoe in shoes | filter:colorFilter">
    <a class="product-image" ng-href="{{shoe.link}}">
-   <img ng-src="{{shoe.image_link | checkmark}}" alt="2&quot; Red Solid Satin Microfiber Skinny Tie">
+   <img ng-src="{{shoe.image_link | checkmark}}" alt="shoes">
    </a>
    
    <div class="product-details">

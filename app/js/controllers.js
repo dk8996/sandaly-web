@@ -8,14 +8,18 @@ var sandalyControllers = angular.module('sandalyControllers', []);
 sandalyControllers.controller('FilterCtrl', [ '$scope', '$http',
                                         		function($scope, $http) {
 	
-	$scope.showCollection = false;
-	$scope.showColor = false;
-	$scope.showPrice = false;
+
 	
 }]);
 
 sandalyControllers.controller('ShoeListCtrl', [ '$scope', '$http',
 		function($scope, $http) {
+	
+	$scope.showCollection = false;
+	$scope.showColor = false;
+	$scope.showPrice = false;
+	$scope.colorFilter = "";
+	
 			$scope.shoes = [
 			                {
     "brand": "BORN",
