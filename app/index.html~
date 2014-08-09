@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+
+<html class="no-js" lang="en" ng-app="sandalyApp">
+<!--<![endif]-->
+
+<head>
+<meta charset="utf-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+
+<title>Sandaly</title>
+<meta content="" name="description">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<link href="css/app.css" rel="stylesheet">
+</head>
+
+<body>
+	<div id="wrapper">
+		<div class="promo-top">
+			<a class="promo" href="http://skinnyties.com/offers/">
+				<div class="container">
+					<div class="content">
+					</div>
+				</div>
+			</a>
+		</div>
+
+		<header class="header" id="header">
+			<div class="container">
+				<h1 id="logo">
+					<a href="http://skinnyties.com/">Skinny Ties</a>
+				</h1>
+
+				<ul class="skip-links">
+					<li class="hidden"><a href="#matter">Skip to content</a></li>
+
+					<li class="hidden"><a href="#nav">Skip to navigation</a></li>
+
+					<li><a class="skip-cart" href="#header-cart">Skip to cart
+							links</a></li>
+
+					<li><a class="skip-account" href="#header-account">Skip to
+							account links</a></li>
+
+					<li><a class="skip-search" href="#header-search">Skip to
+							search</a></li>
+				</ul>
+
+				<div class="skip-content" id="header-account">
+					<ul class="links">
+						<li class="first"><a
+							href="https://skinnyties.com/customer/account/login/"
+							title="Sign In">Sign In</a></li>
+
+						<li class=" last"><a
+							href="https://skinnyties.com/customer/account/create/"
+							title="Register">Register</a></li>
+					</ul>
+				</div>
+
+				<div class="skip-content" id="header-cart">
+					<ul class="links">
+						<li class="first last"><a class="top-link-cart"
+							href="http://skinnyties.com/checkout/cart/" title="">Cart <span
+								class="count empty">0</span></a></li>
+					</ul>
+
+					<div class="menu-wrapper menu cart-menu">
+						<p class="empty">Your cart is empty.</p>
+					</div>
+				</div>
+
+				<div class="skip-content" id="header-search">
+					<form action="http://skinnyties.com/catalogsearch/result/"
+						id="search-form" method="get" name="search-form">
+						<div class="input-box">
+							<label for="search">Search</label> <input autocomplete="off"
+								class="input-text" id="search" maxlength="128" name="q"
+								placeholder="Search" type="text" value="">
+						</div>
+						<button class="button" type="submit">Submit</button>
+
+						<div class="search-autocomplete" id="search_autocomplete"
+							style="display: none;"></div>
+						<script type="text/javascript">
+							//<![CDATA[
+
+							/* Magento original */
+							/*var searchForm = new Varien.searchForm('search-form', 'search', 'Search');*/
+
+							/* GravDept custom, replace JS with HTML5 placeholder */
+							var searchForm = new Varien.searchForm(
+									'search-form', 'search', '');
+
+							searchForm
+									.initAutocomplete(
+											'http://skinnyties.com/catalogsearch/ajax/suggest/',
+											'search_autocomplete');
+							//]]>
+						</script>
+					</form>
+				</div>
+
+				<nav id="nav">
+					<ol class="nav-primary">
+						<li class="level0 nav-collection"><a class="level0"
+							href="http://skinnyties.com/collection/">Collection</a>
+
+							<div class="menu-wrapper menu">
+								<ul class="nav-group-list">
+									<li><a href="http://skinnyties.com/collection/new/">
+											<div class="wrapper" data-nav-img-alt="New Arrivals"
+												data-nav-img-src="http://skinnyties.com/skin/frontend/skinnyties/skinnyties/media/category/collection/new.jpg">
+												<img alt="New Arrivals"
+													src="http://skinnyties.com/skin/frontend/skinnyties/skinnyties/media/category/collection/new.jpg">
+
+												<div class="info">
+													<strong>New Arrivals</strong>
+
+													<p>The freshest new styles.</p>
+												</div>
+											</div>
+									</a></li>
+
+									<li><a href="http://skinnyties.com/collection/popular/">
+											<div class="wrapper" data-nav-img-alt="Popular Skinny Ties"
+												data-nav-img-src="http://skinnyties.com/skin/frontend/skinnyties/skinnyties/media/category/collection/popular.jpg">
+												<img alt="Popular Skinny Ties"
+													src="http://skinnyties.com/skin/frontend/skinnyties/skinnyties/media/category/collection/popular.jpg">
+
+												<div class="info">
+													<strong>Popular</strong>
+
+													<p>Your favs. Our best sellers.</p>
+												</div>
+											</div>
+									</a></li>
+
+									<li><a href="http://skinnyties.com/collection/favorites/">
+											<div class="wrapper"
+												data-nav-img-alt="Our Favorite Skinny Ties"
+												data-nav-img-src="http://skinnyties.com/skin/frontend/skinnyties/skinnyties/media/category/collection/favorites.jpg">
+												<img alt="Our Favorite Skinny Ties"
+													src="http://skinnyties.com/skin/frontend/skinnyties/skinnyties/media/category/collection/favorites.jpg">
+
+												<div class="info">
+													<strong>Favorites</strong>
+
+													<p>What we’re wearing now.</p>
+												</div>
+											</div>
+									</a></li>
+
+									<li><a
+										href="http://skinnyties.com/collection/made-in-usa/">
+											<div class="wrapper"
+												data-nav-img-alt="Made in USA Skinny Ties"
+												data-nav-img-src="http://skinnyties.com/skin/frontend/skinnyties/skinnyties/media/category/collection/made-in-usa.jpg">
+												<img alt="Made in USA Skinny Ties"
+													src="http://skinnyties.com/skin/frontend/skinnyties/skinnyties/media/category/collection/made-in-usa.jpg">
+
+												<div class="info">
+													<strong>Made in USA</strong>
+
+													<p>100% American quality.</p>
+												</div>
+											</div>
+									</a></li>
+
+									<li><a href="http://skinnyties.com/collection/tie-bars/">
+											<div class="wrapper" data-nav-img-alt="Tie Bars"
+												data-nav-img-src="http://skinnyties.com/skin/frontend/skinnyties/skinnyties/media/category/collection/tie-bars.jpg">
+												<img alt="Tie Bars"
+													src="http://skinnyties.com/skin/frontend/skinnyties/skinnyties/media/category/collection/tie-bars.jpg">
+
+												<div class="info">
+													<strong>Tie Bars</strong>
+
+													<p>Sized just for skinny ties.</p>
+												</div>
+											</div>
+									</a></li>
+
+									<li><a
+										href="http://skinnyties.com/collection/solid-satin/">
+											<div class="wrapper"
+												data-nav-img-alt="Solid Satin Skinny Ties"
+												data-nav-img-src="http://skinnyties.com/skin/frontend/skinnyties/skinnyties/media/category/collection/solid-satin.jpg">
+												<img alt="Solid Satin Skinny Ties"
+													src="http://skinnyties.com/skin/frontend/skinnyties/skinnyties/media/category/collection/solid-satin.jpg">
+
+												<div class="info">
+													<strong>Solid Satin</strong>
+
+													<p>Bold color with a shimmer.</p>
+												</div>
+											</div>
+									</a></li>
+
+									<li><a href="http://skinnyties.com/collection/collegiate/">
+											<div class="wrapper"
+												data-nav-img-alt="Collegiate Skinny Ties"
+												data-nav-img-src="http://skinnyties.com/skin/frontend/skinnyties/skinnyties/media/category/collection/collegiate.jpg">
+												<img alt="Collegiate Skinny Ties"
+													src="http://skinnyties.com/skin/frontend/skinnyties/skinnyties/media/category/collection/collegiate.jpg">
+
+												<div class="info">
+													<strong>Collegiate</strong>
+
+													<p>Strong and confident.</p>
+												</div>
+											</div>
+									</a></li>
+
+									<li><a href="http://skinnyties.com/collection/retro/">
+											<div class="wrapper" data-nav-img-alt="Retro Skinny Ties"
+												data-nav-img-src="http://skinnyties.com/skin/frontend/skinnyties/skinnyties/media/category/collection/retro.jpg">
+												<img alt="Retro Skinny Ties"
+													src="http://skinnyties.com/skin/frontend/skinnyties/skinnyties/media/category/collection/retro.jpg">
+
+												<div class="info">
+													<strong>Retro</strong>
+
+													<p>Vintage patterns and colors.</p>
+												</div>
+											</div>
+									</a></li>
+
+									<li><a href="http://skinnyties.com/collection/knit/">
+											<div class="wrapper" data-nav-img-alt="Knit Skinny Ties"
+												data-nav-img-src="http://skinnyties.com/skin/frontend/skinnyties/skinnyties/media/category/collection/knit.jpg">
+												<img alt="Knit Skinny Ties"
+													src="http://skinnyties.com/skin/frontend/skinnyties/skinnyties/media/category/collection/knit.jpg">
+
+												<div class="info">
+													<strong>Knit</strong>
+
+													<p>Scholarly and civilized.</p>
+												</div>
+											</div>
+									</a></li>
+								</ul>
+								<a class="browse-all button button-medium"
+									href="http://skinnyties.com/collection/">Browse all
+									collections</a>
+							</div></li>
+
+						<li class="level0 nav-color"><a class="level0"
+							href="http://skinnyties.com/color/">Color</a>
+
+							<div class="menu-wrapper menu">
+								<ul class="nav-color-list">
+									<li><a href="http://skinnyties.com/color/blue/"><span
+											class="swatch blu"></span>Blue</a></li>
+
+									<li><a href="http://skinnyties.com/color/green/"><span
+											class="swatch grn"></span>Green</a></li>
+
+									<li><a href="http://skinnyties.com/color/yellow/"><span
+											class="swatch yel"></span>Yellow</a></li>
+
+									<li><a href="http://skinnyties.com/color/orange/"><span
+											class="swatch ora"></span>Orange</a></li>
+
+									<li><a href="http://skinnyties.com/color/red/"><span
+											class="swatch red"></span>Red</a></li>
+
+									<li><a href="http://skinnyties.com/color/purple/"><span
+											class="swatch pur"></span>Purple</a></li>
+
+									<li><a href="http://skinnyties.com/color/pink/"><span
+											class="swatch pin"></span>Pink</a></li>
+
+									<li><a href="http://skinnyties.com/color/brown/"><span
+											class="swatch bro"></span>Brown</a></li>
+
+									<li><a href="http://skinnyties.com/color/black/"><span
+											class="swatch bla"></span>Black</a></li>
+
+									<li><a href="http://skinnyties.com/color/white/"><span
+											class="swatch whi"></span>White</a></li>
+
+									<li><a href="http://skinnyties.com/color/gray/"><span
+											class="swatch gry"></span>Gray</a></li>
+								</ul>
+								<a class="browse-all button button-medium"
+									href="http://skinnyties.com/color/">Browse all colors</a>
+							</div></li>
+
+						<li class="level0 nav-width"><a class="level0"
+							href="http://skinnyties.com/width/">Width</a>
+
+							<div class="menu-wrapper menu">
+								<ul class="nav-group-list">
+									<li><a href="http://skinnyties.com/width/extra-skinny/">
+											<div class="wrapper" data-nav-img-alt="Extra Skinny Ties"
+												data-nav-img-src="http://skinnyties.com/skin/frontend/skinnyties/skinnyties/media/category/width/extra-skinny.jpg">
+												<img alt="Extra Skinny Ties"
+													src="http://skinnyties.com/skin/frontend/skinnyties/skinnyties/media/category/width/extra-skinny.jpg">
+
+												<div class="info">
+													<strong>Extra Skinny</strong>
+
+													<p>
+														As thin as they come.<br> <span>1.50 inches</span>
+													</p>
+												</div>
+											</div>
+									</a></li>
+
+									<li><a href="http://skinnyties.com/width/skinny/">
+											<div class="wrapper" data-nav-img-alt="Skinny Ties"
+												data-nav-img-src="http://skinnyties.com/skin/frontend/skinnyties/skinnyties/media/category/width/skinny.jpg">
+												<img alt="Skinny Ties"
+													src="http://skinnyties.com/skin/frontend/skinnyties/skinnyties/media/category/width/skinny.jpg">
+
+												<div class="info">
+													<strong>Skinny</strong>
+
+													<p>
+														Classic skinny proportions.<br> <span>2.00 –
+															2.50 inches</span>
+													</p>
+												</div>
+											</div>
+									</a></li>
+
+									<li><a href="http://skinnyties.com/width/narrow/">
+											<div class="wrapper" data-nav-img-alt="Narrow Ties"
+												data-nav-img-src="http://skinnyties.com/skin/frontend/skinnyties/skinnyties/media/category/width/narrow.jpg">
+												<img alt="Narrow Ties"
+													src="http://skinnyties.com/skin/frontend/skinnyties/skinnyties/media/category/width/narrow.jpg">
+
+												<div class="info">
+													<strong>Narrow</strong>
+
+													<p>
+														A little thin, not too much.<br> <span>2.75 –
+															3.25 inches</span>
+													</p>
+												</div>
+											</div>
+									</a></li>
+								</ul>
+								<a class="browse-all button button-medium"
+									href="http://skinnyties.com/width/">Browse all widths</a>
+							</div></li>
+
+						<li class="level0 nav-fabric"><a class="level0"
+							href="http://skinnyties.com/fabric/">Fabric</a>
+
+							<div class="menu-wrapper menu">
+								<ul class="nav-group-list">
+									<li><a href="http://skinnyties.com/fabric/silk/">
+											<div class="wrapper" data-nav-img-alt="Silk Skinny Ties"
+												data-nav-img-src="http://skinnyties.com/skin/frontend/skinnyties/skinnyties/media/category/fabric/silk.jpg">
+												<img alt="Silk Skinny Ties"
+													src="http://skinnyties.com/skin/frontend/skinnyties/skinnyties/media/category/fabric/silk.jpg">
+
+												<div class="info">
+													<strong>Silk</strong>
+
+													<p>Premium finish and feel.</p>
+												</div>
+											</div>
+									</a></li>
+
+									<li><a href="http://skinnyties.com/fabric/microfiber/">
+											<div class="wrapper"
+												data-nav-img-alt="Microfiber Skinny Ties"
+												data-nav-img-src="http://skinnyties.com/skin/frontend/skinnyties/skinnyties/media/category/fabric/microfiber.jpg">
+												<img alt="Microfiber Skinny Ties"
+													src="http://skinnyties.com/skin/frontend/skinnyties/skinnyties/media/category/fabric/microfiber.jpg">
+
+												<div class="info">
+													<strong>Microfiber</strong>
+
+													<p>Sleek and extra durable.</p>
+												</div>
+											</div>
+									</a></li>
+
+									<li><a href="http://skinnyties.com/fabric/cotton/">
+											<div class="wrapper" data-nav-img-alt="Cotton Skinny Ties"
+												data-nav-img-src="http://skinnyties.com/skin/frontend/skinnyties/skinnyties/media/category/fabric/cotton.jpg">
+												<img alt="Cotton Skinny Ties"
+													src="http://skinnyties.com/skin/frontend/skinnyties/skinnyties/media/category/fabric/cotton.jpg">
+
+												<div class="info">
+													<strong>Cotton</strong>
+
+													<p>A true natural fabric.</p>
+												</div>
+											</div>
+									</a></li>
+
+									<li><a href="http://skinnyties.com/fabric/knit-cotton/">
+											<div class="wrapper"
+												data-nav-img-alt="Knit Cotton Skinny Ties"
+												data-nav-img-src="http://skinnyties.com/skin/frontend/skinnyties/skinnyties/media/category/fabric/knit-cotton.jpg">
+												<img alt="Knit Cotton Skinny Ties"
+													src="http://skinnyties.com/skin/frontend/skinnyties/skinnyties/media/category/fabric/knit-cotton.jpg">
+
+												<div class="info">
+													<strong>Knit Cotton</strong>
+
+													<p>Unique woven texture.</p>
+												</div>
+											</div>
+									</a></li>
+
+									<li><a href="http://skinnyties.com/fabric/wool/">
+											<div class="wrapper" data-nav-img-alt="Wool Skinny Ties"
+												data-nav-img-src="http://skinnyties.com/skin/frontend/skinnyties/skinnyties/media/category/fabric/wool.jpg">
+												<img alt="Wool Skinny Ties"
+													src="http://skinnyties.com/skin/frontend/skinnyties/skinnyties/media/category/fabric/wool.jpg">
+
+												<div class="info">
+													<strong>Wool</strong>
+
+													<p>Robust and warming.</p>
+												</div>
+											</div>
+									</a></li>
+								</ul>
+								<a class="browse-all button button-medium"
+									href="http://skinnyties.com/fabric/">Browse all fabrics</a>
+							</div></li>
+
+						<li class="level0 nav-style"><a class="level0"
+							href="http://skinnyties.com/pattern/">Pattern</a>
+
+							<div class="menu-wrapper menu">
+								<ul class="nav-group-list">
+									<li><a href="http://skinnyties.com/pattern/solid/">
+											<div class="wrapper" data-nav-img-alt="Solid Skinny Ties"
+												data-nav-img-src="http://skinnyties.com/skin/frontend/skinnyties/skinnyties/media/category/pattern/solid.jpg">
+												<img alt="Solid Skinny Ties"
+													src="http://skinnyties.com/skin/frontend/skinnyties/skinnyties/media/category/pattern/solid.jpg">
+
+												<div class="info">
+													<strong>Solid</strong>
+
+													<p>Simple and effective.</p>
+												</div>
+											</div>
+									</a></li>
+
+									<li><a href="http://skinnyties.com/pattern/striped/">
+											<div class="wrapper" data-nav-img-alt="Knit Skinny Ties"
+												data-nav-img-src="http://skinnyties.com/skin/frontend/skinnyties/skinnyties/media/category/pattern/striped.jpg">
+												<img alt="Knit Skinny Ties"
+													src="http://skinnyties.com/skin/frontend/skinnyties/skinnyties/media/category/pattern/striped.jpg">
+
+												<div class="info">
+													<strong>Striped</strong>
+
+													<p>Modest and assertive.</p>
+												</div>
+											</div>
+									</a></li>
+
+									<li><a href="http://skinnyties.com/pattern/plaid/">
+											<div class="wrapper" data-nav-img-alt="Plaid Skinny Ties"
+												data-nav-img-src="http://skinnyties.com/skin/frontend/skinnyties/skinnyties/media/category/pattern/plaid.jpg">
+												<img alt="Plaid Skinny Ties"
+													src="http://skinnyties.com/skin/frontend/skinnyties/skinnyties/media/category/pattern/plaid.jpg">
+
+												<div class="info">
+													<strong>Plaid</strong>
+
+													<p>Madras, the hipster staple.</p>
+												</div>
+											</div>
+									</a></li>
+
+									<li><a href="http://skinnyties.com/pattern/graphic/">
+											<div class="wrapper" data-nav-img-alt="Graphic Skinny Ties"
+												data-nav-img-src="http://skinnyties.com/skin/frontend/skinnyties/skinnyties/media/category/pattern/graphic.jpg">
+												<img alt="Graphic Skinny Ties"
+													src="http://skinnyties.com/skin/frontend/skinnyties/skinnyties/media/category/pattern/graphic.jpg">
+
+												<div class="info">
+													<strong>Graphic</strong>
+
+													<p>Not your father’s Paisley.</p>
+												</div>
+											</div>
+									</a></li>
+								</ul>
+								<a class="browse-all button button-medium"
+									href="http://skinnyties.com/pattern/">Browse all patterns</a>
+							</div></li>
+					</ol>
+				</nav>
+			</div>
+		</header>
+
+		<div class="matter" id="matter">
+			<div class="home-hero">
+				<div class="sidestep">
+					<div class="sidestep-wrapper" style="max-width: 945px;">
+						<ul class="sidestep-list" style="width: 945px; left: 0px;">
+							<li><a class="tie" href="http://skinnyties.com/color/black/"><img
+									alt="Black Skinny Ties"
+									src="http://skinnyties.com/skin/frontend/skinnyties/skinnyties/media/home/sidestep/black@1.5x.jpg">
+
+									<div class="label">Black</div></a></li>
+
+							<li><a class="tie" href="http://skinnyties.com/color/blue/"><img
+									alt="Blue Skinny Ties"
+									src="http://skinnyties.com/skin/frontend/skinnyties/skinnyties/media/home/sidestep/blue@1.5x.jpg">
+
+									<div class="label">Blue</div></a></li>
+
+							<li><a class="tie"
+								href="http://skinnyties.com/collection/collegiate/"><img
+									alt="Collegiate Skinny Ties"
+									src="http://skinnyties.com/skin/frontend/skinnyties/skinnyties/media/home/sidestep/collegiate@1.5x.jpg">
+
+									<div class="label">Collegiate</div></a></li>
+
+							<li><a class="tie"
+								href="http://skinnyties.com/fabric/cotton/"><img
+									alt="Cotton Skinny Ties"
+									src="http://skinnyties.com/skin/frontend/skinnyties/skinnyties/media/home/sidestep/cotton@1.5x.jpg">
+
+									<div class="label">Cotton</div></a></li>
+
+							<li><a class="tie"
+								href="http://skinnyties.com/collection/favorites/"><img
+									alt="Favorite Skinny Ties"
+									src="http://skinnyties.com/skin/frontend/skinnyties/skinnyties/media/home/sidestep/favorites@1.5x.jpg">
+
+									<div class="label">Favorites</div></a></li>
+
+							<li><a class="tie"
+								href="http://skinnyties.com/pattern/graphic/"><img
+									alt="Graphic Skinny Ties"
+									src="http://skinnyties.com/skin/frontend/skinnyties/skinnyties/media/home/sidestep/graphic@1.5x.jpg">
+
+									<div class="label">Graphic</div></a></li>
+
+							<li><a class="tie"
+								href="http://skinnyties.com/pattern/plaid/"><img
+									alt="Plaid Skinny Ties"
+									src="http://skinnyties.com/skin/frontend/skinnyties/skinnyties/media/home/sidestep/plaid@1.5x.jpg">
+
+									<div class="label">Plaid</div></a></li>
+
+							<li><a class="tie" href="http://skinnyties.com/fabric/silk/"><img
+									alt="Silk Skinny Ties"
+									src="http://skinnyties.com/skin/frontend/skinnyties/skinnyties/media/home/sidestep/silk@1.5x.jpg">
+
+									<div class="label">Silk</div></a></li>
+
+							<li><a class="tie"
+								href="http://skinnyties.com/pattern/striped/"><img
+									alt="Striped Skinny Ties"
+									src="http://skinnyties.com/skin/frontend/skinnyties/skinnyties/media/home/sidestep/striped@1.5x.jpg">
+
+									<div class="label">Striped</div></a></li>
+						</ul>
+					</div>
+
+					<ul class="sidestep-nav inactive">
+						<li><a class="prev disable" href="#">Previous</a></li>
+
+						<li><a class="next disable" href="#">Next</a></li>
+					</ul>
+				</div>
+
+				<div class="sidestep-headline">Start dressing better.</div>
+			</div>
+<div class="layer-fore">
+		        <div class="container">
+
+
+
+		<ol class="product-grid" ng-controller="ShoeListCtrl">
+							<li class="item" ng-repeat="shoe in shoes">
+   <a class="product-image" href="http://skinnyties.com/2-inch-red-solid-satin-microfiber-skinny-tie">
+   <img ng-src="{{shoe.image_link}}" alt="2&quot; Red Solid Satin Microfiber Skinny Tie">
+   </a>
+   
+   <div class="product-details">
+      <a class="product-name" href="http://skinnyties.com/2-inch-red-solid-satin-microfiber-skinny-tie">{{shoe.title}}</a>
+      <div class="price-box">
+         <span class="regular-price" id="product-price-102">
+         <span class="price">{{shoe.price | currency}}</span>                                    
+         </span>
+      </div>
+   </div>
+</li>
+							
+
+					</ol>
+		
+		
+	<div class="toolbar pager-bar">
+		
+
+	<!-- pager -->
+	<div class="pager">
+		
+
+
+			
+		<!-- item count -->
+				
+		<!-- show per page -->
+				
+		<!-- pagination -->
+					<ol class="pages">
+								
+									<li>
+						<a class="previous i-previous" title="Previous Page" href="http://skinnyties.com/collection/solid-satin?p=1">
+															Previous													</a>
+					</li>
+								
+						
+															<li><a href="http://skinnyties.com/collection/solid-satin?p=1">1</a></li>
+																				<li><span class="current">2</span></li>
+											
+						
+								
+							</ol>
+		
+	
+		
+		<p class="amount">
+						    <strong>Items 16 - 28</strong> of 28 total					</p>
+	</div>
+	
+	<!-- sort -->
+			<div class="sort-by">
+			<label for="options_sort">Sort by</label>
+			<select id="options_sort" onchange="setLocation(this.value)">
+									<option value="http://skinnyties.com/collection/solid-satin?dir=asc&amp;order=position" selected="selected">
+						Best Value					</option>
+									<option value="http://skinnyties.com/collection/solid-satin?dir=asc&amp;order=name">
+						Name					</option>
+									<option value="http://skinnyties.com/collection/solid-satin?dir=asc&amp;order=price">
+						Price					</option>
+							</select>
+			
+							<a class="reverse" href="http://skinnyties.com/collection/solid-satin?dir=desc&amp;order=position" title="Reverse sort direction">Reverse sort direction</a>
+					</div>
+		
+	<div class="limiter">
+		<label for="options_show">Show</label>
+		<select id="options_show" onchange="setLocation(this.value)">
+					<option value="http://skinnyties.com/collection/solid-satin?limit=15" selected="selected">
+				15				 per page							</option>
+					<option value="http://skinnyties.com/collection/solid-satin?limit=30">
+				30				 per page							</option>
+					<option value="http://skinnyties.com/collection/solid-satin?limit=45">
+				45				 per page							</option>
+				</select>
+	</div>
+
+	<!-- view -->
+					<div class="view-mode">
+										<label for="options_view">View as</label>
+				<select id="options_view" onchange="setLocation(this.value)">
+															<option value="http://skinnyties.com/collection/solid-satin?mode=grid" selected="selected">Grid</option>
+																				<option value="http://skinnyties.com/collection/solid-satin?mode=list">List</option>
+													</select>
+					</div>    
+				
+	</div>
+		
+
+		            
+		            		            
+		            
+	<ul class="breadcrumbs">
+					<li class="home">
+									<a href="http://skinnyties.com/">Home</a>
+								
+									<span>/</span>
+							</li>
+					<li class="category13">
+									<a href="http://skinnyties.com/collection">Shop by Collection</a>
+								
+									<span>/</span>
+							</li>
+					<li class="category21">
+									Solid Satin Skinny Ties								
+							</li>
+			</ul>
+		        </div>
+		    </div>
+			<div class="container">
+				<ul class="triad">
+					<li><a class="promo-image"
+						href="http://skinnyties.com/collection/popular/">
+							<h2>Popular</h2>
+							<img alt=""
+							src="http://skinnyties.com/skin/frontend/skinnyties/skinnyties/media/home/triad/popular@1.5x.jpg">
+					</a></li>
+
+					<li><a class="promo-image"
+						href="http://skinnyties.com/collection/tie-bars/">
+							<h2>Tie Bars</h2>
+							<img alt=""
+							src="http://skinnyties.com/skin/frontend/skinnyties/skinnyties/media/home/triad/tie-bars@1.5x.jpg">
+					</a></li>
+
+					<li><a class="promo-image"
+						href="http://skinnyties.com/collection/solid-satin/">
+							<h2>Solid Satin</h2>
+							<img alt=""
+							src="http://skinnyties.com/skin/frontend/skinnyties/skinnyties/media/home/triad/solid-satin@1.5x.jpg">
+					</a></li>
+				</ul>
+
+				<div class="our-story">
+					<div class="hook">
+						<span>We started designing and selling neckties in 1971.</span> <span>After
+							41 years, we’re still family-owned and operated.</span>
+					</div>
+
+					<div>
+						<a href="http://skinnyties.com/our-story/">View Our Story</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<footer id="footer">
+			<section class="footer-main">
+				<div class="container">
+					<section class="weekly-pick">
+						<div class="featured-product">
+							<h1 class="h3">Weekly Pick</h1>
+
+							<div class="wrapper">
+								<a class="product-image"
+									href="http://skinnyties.com/catalog/product/view/id/364/s/2-inch-graay-peach-green-cotton-plaid-skinny-tie-made-in-the-usa/category/44/">
+									<img alt=""
+									src="http://skinnyties.com/media/catalog/product/cache/1/small_image/435x255/9df78eab33525d08d6e5fb8d27136e95/2/0/200-071-gry-pea-grn.jpg">
+								</a> <a class="product-name"
+									href="http://skinnyties.com/catalog/product/view/id/364/s/2-inch-graay-peach-green-cotton-plaid-skinny-tie-made-in-the-usa/category/44/">
+									2" Gray, Peach and Green Cotton Plaid Skinny Tie Made in the
+									USA</a>
+							</div>
+						</div>
+					</section>
+
+					<section class="social-follow">
+						<h1 class="h3">Loop Us In</h1>
+
+						<p>Tightly knotted or hanging loose? Fitted suit or selvedge
+							denim? Share your style with us.</p>
+
+						<ul>
+							<li><a class="facebook"
+								href="http://facebook.com/SkinnyTies">Facebook</a></li>
+
+							<li><a class="pinterest"
+								href="http://pinterest.com/skinnyties">Pinterest</a></li>
+
+							<li><a class="twitter"
+								href="http://twitter.com/SkinnyTiesShop">Twitter</a></li>
+						</ul>
+					</section>
+
+					<section class="newsletter">
+						<h1 class="h3">The Quarterly</h1>
+
+						<p>Our newsletter is simple and brief for the hard-pressed
+							gentleman.</p>
+
+						<form action="http://skinnyties.com/newsletter/subscriber/new/"
+							id="newsletter-global-form" method="post"
+							name="newsletter-global-form">
+							<label for="newsletter-email">Email</label>
+
+							<div class="input-box">
+								<input class="input-text required-entry validate-email"
+									id="newsletter-email" name="email"
+									placeholder="name@example.com" type="email">
+							</div>
+
+							<div class="buttons-set">
+								<button class="button" type="submit">Subscribe Me</button>
+							</div>
+						</form>
+						<script type="text/javascript">
+							//<![CDATA[
+							var newsletterSubscriberFormDetail = new VarienForm(
+									'newsletter-global-form');
+							//]]>
+						</script>
+					</section>
+
+					<section class="style-guide">
+						<h1 class="h3">Style Guide</h1>
+						<a class="promo-image" href="http://skinnyties.com/how-to-wear/"><img
+							alt="Windsor Tie Knot"
+							src="http://skinnyties.com/skin/frontend/skinnyties/skinnyties/media/footer/style-guide@1.5x.jpg"></a>
+
+						<p>
+							There are eighty-five ways to <a
+								href="http://skinnyties.com/how-to-tie/">knot a tie</a>. We’ll
+							show you <a href="http://skinnyties.com/how-to-wear/">the
+								essentials</a>.
+						</p>
+					</section>
+				</div>
+			</section>
+
+			<section class="footer-sub">
+				<div class="container">
+					<nav class="nav-footer">
+						<h1>Site Navigation</h1>
+
+						<ul class="nav-footer-list">
+							<li>
+								<h2 class="h4">Shop By</h2>
+
+								<ul>
+									<li><a href="http://skinnyties.com/collection/">Collection</a>
+									</li>
+
+									<li><a href="http://skinnyties.com/color/">Color</a></li>
+
+									<li><a href="http://skinnyties.com/width/">Width</a></li>
+
+									<li><a href="http://skinnyties.com/fabric/">Fabric</a></li>
+
+									<li><a href="http://skinnyties.com/pattern/">Pattern</a></li>
+								</ul>
+							</li>
+
+							<li>
+								<h2 class="h4">About Us</h2>
+
+								<ul>
+									<li><a class="nav-our-story"
+										href="http://skinnyties.com/our-story/">Our Story</a></li>
+
+									<li><a class="nav-where-to-buy"
+										href="http://skinnyties.com/where-to-buy/">Where to Buy</a></li>
+
+									<li><a class="nav-wholesale"
+										href="http://skinnyties.com/wholesale/">Wholesale</a></li>
+
+									<li><a class="nav-offers"
+										href="http://skinnyties.com/offers/">Offers</a></li>
+								</ul>
+							</li>
+
+							<li>
+								<h2 class="h4">Style Guide</h2>
+
+								<ul>
+									<li><a class="nav-how-to-wear"
+										href="http://skinnyties.com/how-to-wear/">How To Wear</a></li>
+
+									<li><a class="nav-how-to-tie"
+										href="http://skinnyties.com/how-to-tie/">How To Tie</a></li>
+
+									<li><a class="nav-blog" href="http://blog.skinnyties.com">Blog</a>
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<h2 class="h4">Help</h2>
+
+								<ul>
+									<li><a class="nav-contact"
+										href="http://skinnyties.com/contact/">Contact Us</a></li>
+
+									<li><a class="nav-shipping"
+										href="http://skinnyties.com/shipping/">Shipping Info</a></li>
+
+									<li><a class="nav-returns"
+										href="http://skinnyties.com/returns/">Returns</a></li>
+									<!--<li><a class="nav-faq" href="http://skinnyties.com/faq/">FAQs</a></li>-->
+								</ul>
+							</li>
+						</ul>
+					</nav>
+
+					<section class="contact-box">
+						<h1>We’re here for you.</h1>
+
+						<p>
+							<a href="mailto:help@skinnyties.com">help@skinnyties.com</a><br>
+							<a href="tel:+18776878437">877–687–8437</a>
+						</p>
+						<a class="button button-medium"
+							href="http://skinnyties.com/contact/">Contact Us</a>
+					</section>
+
+					<section class="attribution">
+						<span class="copyright">© 2014 Dimitry Kudryavtsev. All rights reserved.
+					</section>
+
+					<div class="switchers"></div>
+				</div>
+			</section>
+		</footer>
+	</div>
+	<!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+	<div></div>
+	<!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+  -->
+	<script src="js/angular.min.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/services.js"></script>
+	<script src="js/controllers.js"></script>
+	<script src="js/filters.js"></script>
+	<script src="js/directives.js"></script>
+</body>
+</html>

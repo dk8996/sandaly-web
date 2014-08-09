@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+
+<html class="no-js" lang="en" ng-app="sandalyApp">
+<!--<![endif]-->
+
+<head>
+<meta charset="utf-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+
+<title>Sandaly</title>
+<meta content="" name="description">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<link href="css/app.css" rel="stylesheet">
+</head>
+
+<body>
+	<div id="wrapper">
+		<div class="promo-top">
+			<a class="promo" href="http://getsandal.com/offers/">
+				<div class="container">
+					<div class="content">
+					</div>
+				</div>
+			</a>
+		</div>
+
+		<header class="header" id="header">
+			<div class="container">
+				<h1 id="logo">
+					<a href="http://getsandal.com/">Get Sandal</a>
+				</h1>
+
+				<ul class="skip-links">
+					<li class="hidden"><a href="#matter">Skip to content</a></li>
+
+					<li class="hidden"><a href="#nav">Skip to navigation</a></li>
+
+					<li><a class="skip-cart" href="#header-cart">Skip to cart
+							links</a></li>
+
+					<li><a class="skip-account" href="#header-account">Skip to
+							account links</a></li>
+
+					<li><a class="skip-search" href="#header-search">Skip to
+							search</a></li>
+				</ul>
+
+				<div class="skip-content" id="header-account">
+					<ul class="links">
+						<li class="first"><a
+							href="https://getsandal.com/customer/account/login/"
+							title="Sign In">Sign In</a></li>
+
+						<li class=" last"><a
+							href="https://getsandal.com/customer/account/create/"
+							title="Register">Register</a></li>
+					</ul>
+				</div>
+
+				<div class="skip-content" id="header-cart">
+					<ul class="links">
+						<li class="first last"><a class="top-link-cart"
+							href="http://getsandal.com/checkout/cart/" title="">Cart <span
+								class="count empty">0</span></a></li>
+					</ul>
+
+					<div class="menu-wrapper menu cart-menu">
+						<p class="empty">Your cart is empty.</p>
+					</div>
+				</div>
+
+				<div class="skip-content" id="header-search">
+					<form action="http://getsandal.com/catalogsearch/result/"
+						id="search-form" method="get" name="search-form">
+						<div class="input-box">
+							<label for="search">Search</label> <input autocomplete="off"
+								class="input-text" id="search" maxlength="128" name="q"
+								placeholder="Search" type="text" value="">
+						</div>
+						<button class="button" type="submit">Submit</button>
+
+						<div class="search-autocomplete" id="search_autocomplete"
+							style="display: none;"></div>
+						<script type="text/javascript">
+							//<![CDATA[
+
+							/* Magento original */
+							/*var searchForm = new Varien.searchForm('search-form', 'search', 'Search');*/
+
+							/* GravDept custom, replace JS with HTML5 placeholder */
+							var searchForm = new Varien.searchForm(
+									'search-form', 'search', '');
+
+							searchForm
+									.initAutocomplete(
+											'http://getsandal.com/catalogsearch/ajax/suggest/',
+											'search_autocomplete');
+							//]]>
+						</script>
+					</form>
+				</div>
+
+				<nav id="nav">
+					<ol class="nav-primary" ng-controller="FilterCtrl" >
+						<li class="level0 nav-collection"><a class="level0"
+							href="http://getsandal.com/collection/" ng-mouseover="showCollection = true" ng-mouseleave="showCollection = false">Collection</a>
+
+							<div class="menu-wrapper menu" ng-show="showCollection" ng-mouseover="showCollection = true" ng-mouseleave="showCollection = false" >
+								<ul class="nav-group-list">
+									<li><a href="http://getsandal.com/collection/new/">
+											<div class="wrapper" data-nav-img-alt="New Arrivals"
+												data-nav-img-src="http://images.hhbrown.com/born/Pair/D20311-340x200.jpg">
+												<img alt="New Arrivals"
+													src="http://images.hhbrown.com/born/Pair/D20311-340x200.jpg">
+
+												<div class="info">
+													<strong>New Arrivals</strong>
+
+													<p>The freshest new styles.</p>
+												</div>
+											</div>
+									</a></li>
+
+									<li><a href="http://getsandal.com/collection/popular/">
+											<div class="wrapper" data-nav-img-alt="Popular Sandals"
+												data-nav-img-src="http://images.hhbrown.com/Crown/Pair/N14619-340x200.jpg">
+												<img alt="Popular Sandals"
+													src="http://images.hhbrown.com/Crown/Pair/N14619-340x200.jpg">
+
+												<div class="info">
+													<strong>Popular</strong>
+
+													<p>Your favs. Our best sellers.</p>
+												</div>
+											</div>
+									</a></li>
+
+									<li><a
+										href="http://getsandal.com/collection/made-in-usa/">
+											<div class="wrapper"
+												data-nav-img-alt="Made in USA Sandals"
+												data-nav-img-src="http://images.hhbrown.com/sofft/Pair/1274427-340x200.jpg">
+												<img alt="Made in USA Sandals"
+													src="http://images.hhbrown.com/sofft/Pair/1274427-340x200.jpg">
+
+												<div class="info">
+													<strong>Made in USA</strong>
+
+													<p>100% American quality.</p>
+												</div>
+											</div>
+									</a></li>
+
+								</ul>
+								<a class="browse-all button button-medium"
+									href="http://getsandal.com/collection/">Browse all
+									collections</a>
+							</div></li>
+
+						<li class="level0 nav-color"><a class="level0"
+							href="http://getsandal.com/color/" ng-mouseover="showColor = true" ng-mouseleave="showColor = false">Color</a>
+
+							<div class="menu-wrapper menu" ng-show="showColor" ng-mouseover="showColor = true" ng-mouseleave="showColor = false">
+								<ul class="nav-color-list">
+									<li><a href="http://getsandal.com/color/blue/"><span
+											class="swatch blu"></span>Blue</a></li>
+
+									<li><a href="http://getsandal.com/color/green/"><span
+											class="swatch grn"></span>Green</a></li>
+
+									<li><a href="http://getsandal.com/color/yellow/"><span
+											class="swatch yel"></span>Yellow</a></li>
+
+									<li><a href="http://getsandal.com/color/orange/"><span
+											class="swatch ora"></span>Orange</a></li>
+
+									<li><a href="http://getsandal.com/color/red/"><span
+											class="swatch red"></span>Red</a></li>
+
+									<li><a href="http://getsandal.com/color/purple/"><span
+											class="swatch pur"></span>Purple</a></li>
+
+									<li><a href="http://getsandal.com/color/pink/"><span
+											class="swatch pin"></span>Pink</a></li>
+
+									<li><a href="http://getsandal.com/color/brown/"><span
+											class="swatch bro"></span>Brown</a></li>
+
+									<li><a href="http://getsandal.com/color/black/"><span
+											class="swatch bla"></span>Black</a></li>
+
+									<li><a href="http://getsandal.com/color/white/"><span
+											class="swatch whi"></span>White</a></li>
+
+									<li><a href="http://getsandal.com/color/gray/"><span
+											class="swatch gry"></span>Gray</a></li>
+								</ul>
+								<a class="browse-all button button-medium"
+									href="http://getsandal.com/color/">Browse all colors</a>
+							</div></li>
+
+						<li class="level0 nav-width"><a class="level0"
+							href="http://getsandal.com/width/" ng-mouseover="showPrice = true" ng-mouseleave="showPrice = false">Price</a>
+
+							<div class="menu-wrapper menu" ng-show="showPrice" ng-mouseover="showPrice = true" ng-mouseleave="showPrice = false">
+								<ul class="nav-group-list">
+									<li><a href="http://getsandal.com/width/extra-skinny/">
+											<div class="wrapper" data-nav-img-alt="Low Priced Sandals"
+												data-nav-img-src="http://getsandal.com/skin/frontend/skinnyties/skinnyties/media/category/width/extra-skinny.jpg">
+												<img alt="Low"
+													src="http://getsandal.com/skin/frontend/skinnyties/skinnyties/media/category/width/extra-skinny.jpg">
+
+												<div class="info">
+													<strong>Low</strong>
+
+													<p>
+														Priced<br> <span>under $30</span>
+													</p>
+												</div>
+											</div>
+									</a></li>
+
+									<li><a href="http://getsandal.com/width/skinny/">
+											<div class="wrapper" data-nav-img-alt="Mid Priced Sandals"
+												data-nav-img-src="http://getsandal.com/skin/frontend/skinnyties/skinnyties/media/category/width/skinny.jpg">
+												<img alt="Skinny Ties"
+													src="http://getsandal.com/skin/frontend/skinnyties/skinnyties/media/category/width/skinny.jpg">
+
+												<div class="info">
+													<strong>Mid</strong>
+
+													<p>
+														Priced<br> <span>$30 –
+															50</span>
+													</p>
+												</div>
+											</div>
+									</a></li>
+
+									<li><a href="http://getsandal.com/width/narrow/">
+											<div class="wrapper" data-nav-img-alt="Narrow Ties"
+												data-nav-img-src="http://getsandal.com/skin/frontend/skinnyties/skinnyties/media/category/width/narrow.jpg">
+												<img alt="Narrow Ties"
+													src="http://getsandal.com/skin/frontend/skinnyties/skinnyties/media/category/width/narrow.jpg">
+
+												<div class="info">
+													<strong>Narrow</strong>
+
+													<p>
+														Priced<br> <span>Over $50</span>
+													</p>
+												</div>
+											</div>
+									</a></li>
+								</ul>
+								<a class="browse-all button button-medium"
+									href="http://getsandal.com/width/">Browse all widths</a>
+							</div></li>
+					</ol>
+				</nav>
+			</div>
+		</header>
+
+		<div class="matter" id="matter">
+			<div class="home-hero">
+				<div class="sidestep">
+					<div class="sidestep-wrapper" style="max-width: 945px;">
+						<ul class="sidestep-list" style="width: 945px; left: 0px;">
+							<li><a class="tie" href="http://getsandal.com/color/black/"><img
+									alt="Black Skinny Ties"
+									src="http://getsandal.com/skin/frontend/skinnyties/skinnyties/media/home/sidestep/black@1.5x.jpg">
+
+									<div class="label">Black</div></a></li>
+
+							<li><a class="tie" href="http://getsandal.com/color/blue/"><img
+									alt="Blue Skinny Ties"
+									src="http://getsandal.com/skin/frontend/skinnyties/skinnyties/media/home/sidestep/blue@1.5x.jpg">
+
+									<div class="label">Blue</div></a></li>
+
+							<li><a class="tie"
+								href="http://getsandal.com/collection/collegiate/"><img
+									alt="Collegiate Skinny Ties"
+									src="http://getsandal.com/skin/frontend/skinnyties/skinnyties/media/home/sidestep/collegiate@1.5x.jpg">
+
+									<div class="label">Collegiate</div></a></li>
+
+							<li><a class="tie"
+								href="http://getsandal.com/fabric/cotton/"><img
+									alt="Cotton Skinny Ties"
+									src="http://getsandal.com/skin/frontend/skinnyties/skinnyties/media/home/sidestep/cotton@1.5x.jpg">
+
+									<div class="label">Cotton</div></a></li>
+
+							<li><a class="tie"
+								href="http://getsandal.com/collection/favorites/"><img
+									alt="Favorite Skinny Ties"
+									src="http://getsandal.com/skin/frontend/skinnyties/skinnyties/media/home/sidestep/favorites@1.5x.jpg">
+
+									<div class="label">Favorites</div></a></li>
+
+							<li><a class="tie"
+								href="http://getsandal.com/pattern/graphic/"><img
+									alt="Graphic Skinny Ties"
+									src="http://getsandal.com/skin/frontend/skinnyties/skinnyties/media/home/sidestep/graphic@1.5x.jpg">
+
+									<div class="label">Graphic</div></a></li>
+
+							<li><a class="tie"
+								href="http://getsandal.com/pattern/plaid/"><img
+									alt="Plaid Skinny Ties"
+									src="http://getsandal.com/skin/frontend/skinnyties/skinnyties/media/home/sidestep/plaid@1.5x.jpg">
+
+									<div class="label">Plaid</div></a></li>
+
+							<li><a class="tie" href="http://getsandal.com/fabric/silk/"><img
+									alt="Silk Skinny Ties"
+									src="http://getsandal.com/skin/frontend/skinnyties/skinnyties/media/home/sidestep/silk@1.5x.jpg">
+
+									<div class="label">Silk</div></a></li>
+
+							<li><a class="tie"
+								href="http://getsandal.com/pattern/striped/"><img
+									alt="Striped Skinny Ties"
+									src="http://getsandal.com/skin/frontend/skinnyties/skinnyties/media/home/sidestep/striped@1.5x.jpg">
+
+									<div class="label">Striped</div></a></li>
+						</ul>
+					</div>
+
+					<ul class="sidestep-nav inactive">
+						<li><a class="prev disable" href="#">Previous</a></li>
+
+						<li><a class="next disable" href="#">Next</a></li>
+					</ul>
+				</div>
+
+				<div class="sidestep-headline">Start dressing better.</div>
+			</div>
+<div class="layer-fore">
+		        <div class="container">
+
+
+
+		<ol class="product-grid" ng-controller="ShoeListCtrl">
+							<li class="item" ng-repeat="shoe in shoes">
+   <a class="product-image" ng-href="{{shoe.link}}">
+   <img ng-src="{{shoe.image_link | checkmark}}" alt="2&quot; Red Solid Satin Microfiber Skinny Tie">
+   </a>
+   
+   <div class="product-details">
+      <a class="product-name" ng-href="{{shoe.link}}">{{shoe.title}}</a>
+      <div class="price-box">
+         <span class="regular-price" id="product-price-102">
+         <span class="price">{{shoe.price | currency }}</span>                                    
+         </span>
+      </div>
+   </div>
+</li>
+							
+					</ol>
+		        </div>
+		    </div>
+		</div>
+
+		<footer id="footer">
+			<section class="footer-main">
+				<div class="container">
+				</div>
+			</section>
+
+			<section class="footer-sub">
+				<div class="container">
+					<nav class="nav-footer">
+						<h1>Site Navigation</h1>
+
+						<ul class="nav-footer-list">
+
+						</ul>
+					</nav>
+
+					<section class="contact-box">
+						<h1>Contact.</h1>
+
+						<p>
+							<a href="mailto:dimitry@mentful.com">dimitry@mentful.com</a><br>
+						</p>
+					</section>
+
+					<section class="attribution">
+						<span class="copyright">© 2014 Dimitry Kudryavtsev. All rights reserved.
+					</section>
+					<div class="switchers"></div>
+				</div>
+			</section>
+		</footer>
+	</div>
+	<!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+	<div></div>
+	<!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+  -->
+	<script src="js/angular.min.js"></script>
+	<script src="js/controllers.js"></script>
+	<script src="js/filters.js"></script>
+	<script src="js/app.js"></script>
+
+	<script src="js/services.js"></script>
+
+	<script src="js/directives.js"></script>
+</body>
+</html>
